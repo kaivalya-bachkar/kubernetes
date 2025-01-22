@@ -37,7 +37,7 @@ kubectl apply -f mertics-server-components.yml
 
 ## Create the Horizontal Pod Autoscaler: Now, let's create the HPA to scale the deployment based on CPU utilization.
 ### Horizontal Pod Autoscaler
-The hps.yml Create the HPA to scale the deployment based on CPU utilization.
+The hpa.yml Create the HPA to scale the deployment based on CPU utilization.
 
 - To Apply the hpa.yml
 HPA configuration that scales based on CPU utilization:
