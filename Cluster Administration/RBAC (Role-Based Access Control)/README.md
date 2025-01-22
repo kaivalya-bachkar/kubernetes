@@ -43,10 +43,10 @@ kubectl apply -f rolebinding.yaml
 kubectl get rolebinding
 ```
 
-### To check the permissions of the jack user:
+### To check the permissions of the kb user:
 
 ```
-kubectl auth can-i get pod --as jack
+kubectl auth can-i get pod --as kb
 ```
 
 ## Cluster Role
@@ -81,10 +81,10 @@ kubectl apply -f clusterrolebindingns.yaml
 kubectl get clusterrolebindingns
 ```
 
-### To check the permissions of the dev user in the development namespace:
+### To check the permissions of the kb user in the development namespace:
 
 ```
-kubectl auth can-i get secret --as dev -n development
+kubectl auth can-i get secret --as kb -n development
 ```
 
 ## Cluster Role Binding
@@ -103,8 +103,8 @@ kubectl apply -f clusterrolebinding.yaml
 kubectl get clusterrolebinding
 ```
 
-### To check the permissions of the riya user across all namespaces:
+### To check the permissions of the kb user across all namespaces:
 
 ```
-kubectl auth can-i get secret --as tom -A
+kubectl auth can-i get secret --as kb -A
 ```
