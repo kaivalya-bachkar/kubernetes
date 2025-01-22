@@ -2,6 +2,16 @@
 
 This guide provides instructions for creating roles, cluster roles, role bindings, and cluster role bindings in a Kubernetes cluster. RBAC (Role-Based Access Control) allows you to control access to resources within the cluster based on user roles and permissions.
 
+## Service Account
+Service Accounts are used by pods to interact with the Kubernetes API. RBAC (Role-Based Access Control) is a mechanism for controlling access to the Kubernetes resources by users, service accounts, or any entity interacting with the cluster.
+
+
+### Or With kubectl:
+
+```
+kubectl create serviceaccount my-service-account
+```
+
 ## Role
 The role.yml file contains the configuration for creating a role named pod-reader. The role allows the user to perform actions like get, watch, and list on pods resources.
 
