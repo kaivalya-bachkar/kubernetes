@@ -15,10 +15,10 @@ kubectl get pod test -o wide
 ```
 
 ## To Create a pod and add a toleration to it with the following specifications:
-### Key: key
-### Operator: Equal
-### Value: value
-### Effect: Noschedule
+- Key: key
+- Operator: Equal
+- Value: value
+- Effect: Noschedule
 Solution: Use the following YAML definition to create the pod with the toleration:
 ```
 apiVersion: v1
