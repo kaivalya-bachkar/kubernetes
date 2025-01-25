@@ -5,6 +5,10 @@
   chmod 700 get_helm.sh
   ./get_helm.sh
  ```
+- To Check Helm get installed
+ ```
+helm version
+ ```
 - Add Helm Stable Charts for Your Local Client
  ```
   helm repo add stable https://charts.helm.sh/stable
@@ -14,6 +18,11 @@
  ```
   helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
  ```
+
+- To get the latest and Updated Helm-chart
+```
+helm repo update
+```
 
 - Create Prometheus Namespace
  ```
