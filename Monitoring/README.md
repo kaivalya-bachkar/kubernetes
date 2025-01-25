@@ -5,9 +5,9 @@ Prometheus and Grafana are popular open-source tools often used together for mon
 Prometheus is a powerful monitoring and alerting system designed to collect metrics from various sources, such as Kubernetes clusters. In a Kubernetes setup, Prometheus is used to scrape metrics from K8s components, containers, and other services running within the cluster.
 
 - How it works in Kubernetes:
-  -- Prometheus scrapes metrics from pods and nodes in the cluster using an exporter (such as the **Prometheus Node Exporter** or **Kube State Metrics**).
-  -- It uses **Service Discovery** to dynamically discover new services/pods based on Kubernetes labels and annotations.
-  -- Prometheus stores the metrics in its time-series database and can be used to trigger alerts based on predefined conditions.
+  - - Prometheus scrapes metrics from pods and nodes in the cluster using an exporter (such as the **Prometheus Node Exporter** or **Kube State Metrics**).
+  - - It uses **Service Discovery** to dynamically discover new services/pods based on Kubernetes labels and annotations.
+  - - Prometheus stores the metrics in its time-series database and can be used to trigger alerts based on predefined conditions.
   
 - Example metrics Prometheus can collect in Kubernetes:
   -- CPU/Memory usage of containers.
