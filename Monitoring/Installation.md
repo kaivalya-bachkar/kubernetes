@@ -37,11 +37,10 @@
  ```
 
 - To access the Prometheus and Grafana on browser we need to forward the port will using **Kind Cluster** & **Minikube** because the cluster running in docker
-  ```
-  kubectl port-forward svc/kind-prometheus-kube-prome-prometheus -n monitoring 9090:9090 --address=0.0.0.0 &
-  kubectl port-forward svc/kind-prometheus-grafana -n monitoring 3000:80 --address=0.0.0.0 &
-
-  ```
+```
+ kubectl port-forward svc/kind-prometheus-kube-prome-prometheus -n monitoring 9090:9090 --address=0.0.0.0 &
+ kubectl port-forward svc/kind-prometheus-grafana -n monitoring 3000:80 --address=0.0.0.0 &
+```
  - Retrieve Grafana Initial Admin Password
  ```
   kubectl get secret prometheus-stack-grafana -n monitoring -o jsonpath="{.data.admin-password}" | base64 -d && echo 
