@@ -30,23 +30,69 @@ A **Pod** is the smallest and simplest unit that you can create or deploy. Pods 
 
 ## Steps to Deploy Pod:
 
+- Check or Enlist the pods:
+  ```bash
+   kubectl get pods/pod/po
+  ```
 
-### Example Pod YAML Configuration:
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: my-app-pod
-spec:
-  containers:
-  - name: my-container
-    image: nginx
-    ports:
-    - containerPort: 80
-```
-In this example:
-- A Pod named `my-app-pod` is defined.
-- It runs a single container using the `nginx` image.
-- The container listens on port 80.
+- Check all the pods from system:
+  ```bash
+  kubectl get pods/pod/po -A
+  ```
 
+- Create a pod:
+  ```bash
+  kubectl run <pod_name> --image <image_name>
+  ```
+
+- Check the IP of pods:
+  ```bash
+  kubectl get pods -o wide
+  ```
+  
+- Create a pod with Manifest.yml:
+  ```bash
+  kubectl apply -f <manifest.yml>
+  ```  
+  Manifest File:
+  ```yml
+   apiVersion: v1
+   kind: Pod
+   metadata:
+     name: mypod
+   spec:
+     containers:
+     - name: nginxcont
+       image: nginx
+       ports:
+       - containerPort: 80
+   ```
+- In this example:
+   - - A Pod named `my-app-pod` is defined.
+   - - It runs a single container using the `nginx` image.
+   - - The container listens on port 80.
+
+- Execute or Run a pod:
+  ```bash
+   kubectl exec -it <pod_name> /bin/bash
+  ```
+
+- Check the logs of a pod:
+  ```bash
+   kubectl logs <pod_name>
+  ```
+
+- Delete a specific pod:
+  ```bash
+  kubectl delete <pod_name>
+  ```
+ 
+- Delete a multiple pods:
+  ```bash
+  kubectl delete <pod_name> --all
+  ```
+- Delete a pod forcefully:
+  ```bash
+  kubectl delete <pod_name> --all --force
+  ```   
 Pods are the foundation of all Kubernetes applications. They allow you to define how applications are deployed and interact with the environment in a controlled, scalable, and manageable way.
