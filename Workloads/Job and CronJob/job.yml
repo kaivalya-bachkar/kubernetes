@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job
+spec:
+  completions: 1
+  parallelism: 1
+  template:
+    spec:
+      containers:
+      - name: job-container
+        image: busybox
+        command: ["echo", "This is a Job running in Kubernetes"]
+      restartPolicy: OnFailure
