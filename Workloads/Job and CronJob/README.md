@@ -20,7 +20,7 @@ A Job in Kubernetes is responsible for running one or more Pods to perform a spe
 - You will see 1 manifest in the same directory (Job and CronJob) with name job.yml.
 - Copy the content of the manifest and run the following command to deploy it.
 ```bash
-kubectl apply -f job.yaml
+kubectl apply -f job.yml
 ```
 
 ### 2. CronJob:
@@ -43,10 +43,10 @@ A CronJob is a type of Job in Kubernetes that is scheduled to run at a specific 
 
 ### Steps to deploy daemonset:
 
-- You will see 1 manifest in the same directory (Job and CronJob) with name job.yml.
+- You will see 1 manifest in the same directory (Job and CronJob) with name cronjob.yml.
 - Copy the content of the manifest and run the following command to deploy it.
 ```bash
-kubectl apply -f job.yaml
+kubectl apply -f cronjob.yml
 ```
 
 ### Differences Between Job and CronJob:
