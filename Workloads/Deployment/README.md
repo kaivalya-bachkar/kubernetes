@@ -21,3 +21,56 @@ A Deployment in Kubernetes is a resource that manages the rollout, scaling, and 
   kubectl apply -f deployment.yml
   ```
   
+  - Check or Enlist a Deployment:
+  ```bash
+  kubectl get deployment/<deployment_name>
+  ```
+
+- Check details of a Deployment:
+  ```bash
+  kubectl describe deployment/<deployment_name>
+  ```
+
+- Check full details of a Deployment yaml file:
+  ```bash
+  kubectl get deployment/<deployment_name> -o yaml
+  ```
+
+- Change the Current Deployment Image with command:
+  ```bash
+  kubectl set image deployment/<deployment_name> <container_name>=<iamge_name>
+  ```
+
+- Check Revision or Rollout history of a Deployment:
+  ```bash
+  kubectl rollout history deployment/<deployment_name>
+  ```
+  
+  - Check a status of a rollout Deployment:
+  ```bash
+  kubectl rollout status deployment/<deployment_name>
+  ```
+
+- Rollout to Previous version of Revision of Deployment:
+  ```bash
+  kubectl rollout undo deployment/<deployment_name>
+  ```
+
+- Rollout to Specific version of Revision of Deployment:
+  ```bash
+  kubectl rollout undo deployment/<deployment_name> --to-revision=<revision_number>
+  ```
+
+- Change or Rename the change-cause details from <none> to any specific Deployment:
+  ```bash
+  kubectl annotate deployment/<deployment_name> kubernetes.io/change-cause="<revision_number>"
+  ```
+  or
+  ```bash
+  kubectl annotate deployments.app/<deployment_name> kubernetes.io/change-cause="<revision_number>"
+  ```
+
+ - Delete a Deployment:
+   ```bash
+   kubectl delete deployment/<deployment_name>
+   ``` 
