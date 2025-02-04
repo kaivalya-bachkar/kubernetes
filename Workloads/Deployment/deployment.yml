@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydeployment
+spec:
+  replicas: 3
+  strategy:
+   type: RollingUpdate
+   rollingUpdate:
+    maxSurge: 5
+    maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: test
+  template:
+    metadata:
+      labels:
+        app: test
+    spec:
+      containers:
+        - image: nginx
+          name: mycont
+          ports:
+            - containerPort: 80
