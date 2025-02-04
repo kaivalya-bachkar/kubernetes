@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mypod
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dev
+  template:
+    metadata:
+      labels:
+        app: dev
+    spec:
+      containers:
+      - image: nginx
+        name: mycont
+        ports:
+        - containerPort: 80
