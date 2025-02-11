@@ -5,7 +5,7 @@ In Kubernetes, **storage** is a critical component used to persist data for appl
    - Types of volumes:
      - **emptyDir**: Temporary storage that lasts as long as the Pod exists.
      - **hostPath**: Maps a directory on the host node to the container.
-     - **persistentVolumeClaim (PVC)**: Claims a storage resource, often backed by network-attached storage (NAS).
+     - **persistent Volumes (PV) & persistentVolumeClaim (PVC)**: Claims a storage resource, often backed by network-attached storage (NAS).
      - **configMap/secret**: Stores configuration data or sensitive information, which can be mounted as files or environment variables.
 
 ### 2. **Persistent Volumes (PV)**
